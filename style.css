@@ -395,98 +395,62 @@ footer .a:hover {
 
 /* ================= RESPONSIVE ================= */
 
-/* ===== MOBILE ===== */
-
-@media (max-width: 768px) {
-  .hero {
-    min-height: 90vh;
-
-    padding: 140px 20px 80px;
-
-    background-position: center;
-  }
-
-  .hero-text h1 {
-    font-size: 42px;
-  }
-
-  .hero-text h2 {
-    font-size: 24px;
-    line-height: 1.4;
-  }
-
-  .start {
-    width: 100%;
-    max-width: 280px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    min-height: 85vh;
-  }
-
-  .hero-text h1 {
-    font-size: 34px;
-  }
-
-  .hero-text h2 {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .hero,
   .services {
     flex-direction: column;
     text-align: center;
   }
 
+  .hero {
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+    padding: 140px 30px 80px;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
   .hero-text h1 {
-    font-size: 50px;
+    font-size: 52px;
+    line-height: 1.2;
   }
 
   .hero-text h2 {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
+    font-size: 28px;
+    line-height: 1.5;
+    margin-bottom: 25px;
   }
 
-  .nav {
-    position: absolute;
-    top: 70px;
-    right: -300px;
-    width: 230px;
-    border-radius: 20px;
-    transition: 0.4s;
-    padding: 25px;
+  .hero-img img,
+  .services-img img {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
   }
 
-  .nav.active {
-    right: 0;
+  .cards,
+  .pricing-cards {
+    justify-content: center;
   }
 
-  .nav-list {
-    flex-direction: column;
-    gap: 20px;
+  .card,
+  .pricing-card {
+    width: 45%;
   }
 
-  .hero {
-    padding-top: 150px;
+  .services-text {
+    width: 100%;
   }
 
   .contact-box {
-    padding: 25px;
-  }
-
-  .contact-list {
-    flex-wrap: wrap;
+    width: 100%;
+    padding: 35px;
   }
 }
+
 @media (max-width: 768px) {
   .header .container {
     justify-content: space-between;
@@ -498,19 +462,14 @@ footer .a:hover {
 
   .nav {
     position: fixed;
-
     top: 90px;
     right: -100%;
-
     width: 240px;
-
     background: #384b70;
-
     padding: 30px;
-
     border-radius: 20px;
-
     transition: 0.4s;
+    z-index: 999;
   }
 
   .nav.active {
@@ -520,5 +479,159 @@ footer .a:hover {
   .nav-list {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .hero {
+    min-height: 70vh;
+    background-size: cover;
+    background-position: center;
+    padding: 150px 20px 80px;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+
+  .hero-text h2 {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
+  .start {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .about {
+    padding: 70px 20px;
+  }
+
+  .about h2 {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .services {
+    padding: 70px 20px;
+    gap: 40px;
+  }
+
+  .services-text h2 {
+    font-size: 30px;
+  }
+
+  .service-item {
+    text-align: left;
+  }
+
+  .pricing {
+    padding: 70px 20px;
+  }
+
+  .pricing h2 {
+    font-size: 30px;
+  }
+
+  .pricing-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .contact-section {
+    padding: 70px 20px;
+  }
+
+  .contact-box {
+    padding: 25px 20px;
+  }
+
+  .contact-list {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: nowrap;
+
+    gap: 10px;
+  }
+
+  .contact-list a {
+    width: 40px;
+    height: 40px;
+
+    font-size: 15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  footer p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 65vh;
+
+    background-size: cover;
+    background-position: center;
+
+    padding-top: 140px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text h2 {
+    font-size: 18px;
+  }
+
+  .start {
+    font-size: 15px;
+    padding: 12px 25px;
+  }
+
+  .services-text h2,
+  .pricing h2,
+  .about h2 {
+    font-size: 26px;
+  }
+
+  .service-item {
+    padding: 20px;
+  }
+
+  .contact-list {
+    gap: 8px;
+  }
+
+  .contact-list a {
+    width: 35px;
+    height: 35px;
+
+    font-size: 13px;
+  }
+
+  .contact-box {
+    border-radius: 18px;
+  }
+
+  .nav {
+    width: 210px;
   }
 }
